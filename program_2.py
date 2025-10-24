@@ -15,7 +15,8 @@ def word_separator(sentence):
             new_sentence += ' '
         new_sentence += char.lower()
     return new_sentence
-# Example usage
 
-new_sentence = word_separator(sentence)
-print(new_sentence)
+if __name__ == '__main__':
+    # Example usage
+    new_sentence = word_separator(sentence)
+    print(new_sentence)
