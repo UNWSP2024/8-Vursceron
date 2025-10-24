@@ -3,20 +3,17 @@
 # but the first character of each word is uppercase.  
 # Convert the sentence to a string in which the words are separated by spaces, 
 # and the first word starts with an uppercase.  
-# For example the string "StopAndSmellTheRoses" would be converted to "Stop and smell the roses."
+# For example the string "StopAndSmellTheRoses" would be converted to "stop and smell the roses."
 
 # Start your changes on line 13
 sentence = "StopAndSmellTheRoses"
 
 def word_separator(sentence):
-    new_sentence = sentence [0:]
+    new_sentence = sentence[0].lower()
     for char in sentence [1:]:
         if char.isupper():
-            if new_sentence:
-                new_sentence += ' '
-            new_sentence += char.lower()
-        else:
-            new_sentence += char.lower()
+            new_sentence += ' '
+        new_sentence += char.lower()
     return new_sentence
 # Example usage
 
