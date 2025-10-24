@@ -1,0 +1,26 @@
+#define our variables
+class_subjects = {}
+
+#while loop to get user input and build subjects and classes
+while True
+    ask for input of class id
+    ask for input of class name
+    split the subject off of the class id
+    add to the class subjects
+    if subject is not already defined create a dict
+    add the class to the subject
+    ask if they want to add more classes
+
+#ask for a subject and display all of the related classes
+
+class_subjects = {
+    "COS": [
+        {"COS 2005": "Python Programming"},
+        {"COS 3005": "Artificial Inteligence"},
+        {"COS 101" : "Intro to computers"}
+    ],
+    "PSY": [
+        {"PSY 101": "intro to Psy"},
+        {"PSY 201": "More Psy"}
+    ]
+}

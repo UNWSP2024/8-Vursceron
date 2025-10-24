@@ -9,11 +9,14 @@
 
 def word_separator(sentence):
 
-    new_sentence = ""
+    new_sentence = sentence[0]
+    for char in sentence [1:]:
+        if "A" <= char <= "Z":
+            new_sentence += ' ' + char.lower()
+        else:
+            new_sentence += char
     #    Add your logic here
-
     return new_sentence.strip()
-
 # Example usage
 
 sentence = "StopAndSmellTheRoses"
