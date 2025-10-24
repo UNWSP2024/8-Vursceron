@@ -5,17 +5,16 @@
 # Add your logic starting on line 11
 
 def initials_generator(personsName):
-    personsInitials = []
+    personsInitials = ''
     names = personsName.split()
     for name in names:
         if name:
-            personsInitials.append(name[0] + '.')
-    return personsInitials
-    #    Add your logic here
-personsName = input('Enter the users first, middle, and last name')
+            personsInitials += name[0] + '. '
+    return personsInitials.strip()
 
-initials = initials_generator(personsName)
+if __name__ == '__main__':
+    personsName = input('Enter the users first, middle, and last name')
+    print(initials_generator(personsName))
 
-for initial in initials:
-    print(initial, end=' ')
+
 
