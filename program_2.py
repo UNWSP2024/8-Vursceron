@@ -6,21 +6,19 @@
 # For example the string "StopAndSmellTheRoses" would be converted to "Stop and smell the roses."
 
 # Start your changes on line 13
-
-def word_separator(sentence):
-
-    new_sentence = sentence[0]
-    for char in sentence [1:]:
-        if "A" <= char <= "Z":
-            new_sentence += ' ' + char.lower()
-        else:
-            new_sentence += char
-    #    Add your logic here
-    return new_sentence.strip()
-# Example usage
-
 sentence = "StopAndSmellTheRoses"
 
-new_sentence = word_separator(sentence)
+def word_separator(sentence):
+    new_sentence = sentence [0:]
+    for char in sentence [1:]:
+        if char.isupper():
+            if new_sentence:
+                new_sentence += ' '
+            new_sentence += char.lower()
+        else:
+            new_sentence += char.lower()
+    return new_sentence
+# Example usage
 
+new_sentence = word_separator(sentence)
 print(new_sentence)
